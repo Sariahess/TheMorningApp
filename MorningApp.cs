@@ -39,7 +39,7 @@ namespace TheMorningApp
 
 
             // weather : temperature
-            string weatherAPI = "92e5f185dca1f202a53dedfb827f6dc9";
+            string weatherAPI = "openweatherappapi";
             string addressForTemperature = "http://api.openweathermap.org/data/2.5/weather?q=" + $"{locationObj.city}&appid=";
 
             WeatherData.Rootobject weatherObj = JsonConvert.DeserializeObject<WeatherData.Rootobject>(ReturnString(weatherAPI, addressForTemperature));
