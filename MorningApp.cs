@@ -27,7 +27,7 @@ namespace TheMorningApp
             welcomeMessage.Text = $"Good morning, {Environment.UserName.ToUpper()}!!";
 
             // ipDATA : location
-            string ipdataAPI = "9ba5af5e2d8235046f47517c8207fbe015965c2d2bb49b42af325658";
+            string ipdataAPI = "ipDataApiToken";
             string addressForLocation = "https://api.ipdata.co?api-key=";
 
             IpData.Rootobject locationObj = JsonConvert.DeserializeObject<IpData.Rootobject>(ReturnString(ipdataAPI, addressForLocation));
@@ -39,7 +39,7 @@ namespace TheMorningApp
 
 
             // weather : temperature
-            string weatherAPI = "openweatherappapi";
+            string weatherAPI = "openWeatherAppApiToken";
             string addressForTemperature = "http://api.openweathermap.org/data/2.5/weather?q=" + $"{locationObj.city}&appid=";
 
             WeatherData.Rootobject weatherObj = JsonConvert.DeserializeObject<WeatherData.Rootobject>(ReturnString(weatherAPI, addressForTemperature));
